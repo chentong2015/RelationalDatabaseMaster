@@ -1,5 +1,0 @@
-Oracle自带的性能视图V$SYSMETRIC
-实时TPS视图: 每分钟或15秒滑动窗口内的平均TPS
-SELECT metric_name, value
-FROM v$sysmetric
-WHERE metric_name = 'User Transaction Per Sec' AND rownum = 1;
