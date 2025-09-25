@@ -1,5 +1,4 @@
-TODO. Database Performance Optimization
-数据库优化策略，如何提高大量Query执行效率 ?
+TODO. Database Performance Optimization 数据库优化策略
 1. 创建Connection Pool: 连接池高效管理DB的连接资源
 2. 执行Batch Query: 降低发送到DB的请求，"DB交互次数"比"将数据插入表"具有更大性能影响
 3. 执行Concurrent Query: 将相互独立的操作并发执行
@@ -7,10 +6,6 @@ TODO. Database Performance Optimization
 5. 添加Cache Layer: 使用缓存降低DB的请求负载
 6. 扩展DB Partition: 将数据分片存储，或使用分布式数据库
 
-TODO. 如何解决执行DB交互耗时UI阻塞的问题?
-1. 异步操作Async
-   使用异步线程来处理背后的耗时操作, 操作完成后推送数据
-   UI界面显示背后的运行进度
-2. 数据绑定DataBinding
-   使用Controller/Data binding来加载和渲染数据
-   后端数据的更新自动同步到UI界面的显示
+TODO. 解决DB交互耗时造成UI阻塞的问题?
+执行异步操作，提交请求后立即返回，不造成UI的阻塞
+查询执行完成后，再向前端推送数据，发送数据
