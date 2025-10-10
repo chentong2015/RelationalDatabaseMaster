@@ -1,4 +1,4 @@
-com/oracle/main/DemoTableComparison.class
-com/oracle/main/DemoOracleJDBC.class
-com/oracle/main/truncate/DemoOracleTruncate.class
-com/oracle/main/batching/DemoOracleBatching.class
+DemoOracleJDBC.class
+batching\DemoOracleBatching.class
+truncate\DemoOracleTruncate.class
+DemoTableComparison.class

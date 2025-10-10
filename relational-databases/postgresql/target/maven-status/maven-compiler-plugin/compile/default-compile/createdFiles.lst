@@ -1,4 +1,4 @@
-settings/PostgresSqlSettingsTable.class
+batching\PostgresSqlBatching.class
+datetime\DemoDateTime.class
 DemoPostgresJDBC.class
-datetime/DemoDateTime.class
-batching/PostgresSqlBatching.class
+settings\PostgresSqlSettingsTable.class

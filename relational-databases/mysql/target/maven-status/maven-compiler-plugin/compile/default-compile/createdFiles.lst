@@ -1,2 +1,3 @@
-batching/MySqlBatching.class
-logging/InnoDBRedoLog.class
+batching\MySqlBatching.class
+lock\function\LockingFunction.class
+logging\InnoDBRedoLog.class
