@@ -8,6 +8,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="hikaricp-monitoring" />
+        <module name="jdbc-connection-driver" />
         <module name="oracle" />
         <module name="sybase" />
         <module name="custom-datasource" />
@@ -19,7 +20,6 @@
         <module name="sql-lite" />
         <module name="postgresql" />
         <module name="orm-design-core" />
-        <module name="jdbc-driver-connection" />
         <module name="entity-class-parser" />
         <module name="mysql" />
       </profile>

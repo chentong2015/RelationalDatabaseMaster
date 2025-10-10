@@ -15,9 +15,8 @@
     </properties>
 
     <modules>
+        <module>jdbc-connection-driver</module>
         <module>jdbc-connection-pool</module>
-        <module>jdbc-driver-connection</module>
         <module>relational-databases</module>
-        <module>jdbc-connection-pool/hikaricp-monitoring</module>
     </modules>
 </project>
