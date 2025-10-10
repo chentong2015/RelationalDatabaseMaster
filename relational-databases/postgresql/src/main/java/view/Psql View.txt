@@ -14,7 +14,8 @@ Create view view_name AS view_query
 > SELECT * FROM pg_views;
 
 TODO. 查找指定的视图是否存在，判断结果是否唯一
-viewExistsStmt = connection.prepareStatement("select 1 from pg_views where viewowner != 'postgres' and viewname=?")) {
+query = "select 1 from pg_views where viewowner != 'postgres' and viewname=?"
+viewExistsStmt = connection.prepareStatement(query)) {
 viewExistsStmt.setString(1, key);
 try(final ResultSet resultSet = viewExistsStmt.executeQuery()) {
     if (resultSet.next()) {
