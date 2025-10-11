@@ -1,15 +1,10 @@
 SQL Server数据库默认的Schema名称
 Default Schema = dbo
 
-TODO. 通常需要指定使用的数据库名称，避免使用默认的Schema
-<property name=".connection.url">
-   jdbc:sqlserver://device_name:1433;Database=my_database;Trusted_Connection=true;
-   trustServerCertificate=true  版本11.2之后必须设置连接参数
-   encrypt=false 或者配置不加密操作
-</property>
-<property name=".connection.driver_class">
-   com.microsoft.sqlserver.jdbc.SQLServerDriver
-</property>
+TODO. 指定使用的数据库名称，避免使用默认Schema
+版本11.2之后必须设置trust连接参数
+<property name=".connection.url">jdbc:sqlserver://device_name:1433;Database=my_database;Trusted_Connection=true;trustServerCertificate=true;encrypt=false</property>
+<property name=".connection.driver_class">com.microsoft.sqlserver.jdbc.SQLServerDriver</property>
 <property name=".connection.username">test</property>
 <property name=".connection.password">TCHong21</property>
 <property name=".dialect">org.hibernate.dialect.SQLServerDialect</property>
