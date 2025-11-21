@@ -1,8 +1,7 @@
-对字段使用function再模糊查询(like匹配区分大小写)
+-- TODO. 使用Function + 模糊查询(like匹配区分大小写)
 SELECT * FROM public.t_citizen t where trim(t.language) LIKE '%.US';
 
-===============================================================================================
-列的约束条件
+-- TODO. 定义列字段的约束条件
 CREATE TABLE t_test (
    id         integer     PRIMARY KEY,     -- primary key
    temp_id    Integer     NOT NULL Unique, -- candidate key
@@ -14,14 +13,11 @@ CREATE TABLE t_test (
 
 INSERT INTO public.t_test(id, temp_id, name, fullname, value, table_id)
 	VALUES (1, 100, 'name 1', 'full name 1', 5, 1);  -- 受到check条件的约束
-
 INSERT INTO public.t_test(id, temp_id, name, fullname, value, table_id)
 	VALUES (1, 100, 'name 1', 'full name 1', 50, 3); -- 受到外键id条件的约束
 
 ALTER TABLE table_name DROP CONSTRAINT some_name; -- 每一个约束都有一个名字，需要删除指定的名称
-
-===============================================================================================
--- DROP TABLE IF EXISTS public.t_person;
+DROP TABLE IF EXISTS public.t_person;
 
 CREATE TABLE IF NOT EXISTS public.t_person (
     id integer NOT NULL,
@@ -32,3 +28,6 @@ CREATE TABLE IF NOT EXISTS public.t_person (
     city text,
     CONSTRAINT t_person_pkey PRIMARY KEY (id)  -- 自定义主键约束的名称
 )
+
+-- TODO. Alter修改表: 定义列字段类型并设置初始值
+ALTER TABLE t_person ADD COLUMN is_tech CHAR(1) DEFAULT 'N' NOT NULL;

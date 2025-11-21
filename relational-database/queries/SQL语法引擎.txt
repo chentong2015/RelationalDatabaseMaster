@@ -1,0 +1,6 @@
+TODO. SQL语法规范
+SQL必须符合引擎所规定语法, 否则抛出SQLSyntaxErrorException
+
+ORM Template模板语句无法直接在数据库中执行
+select * from t_blog where id=#{id};  JDBC无法执行
+select * from t_blog where id=?;      MyBatis需要对其进行改写

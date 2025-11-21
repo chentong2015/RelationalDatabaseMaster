@@ -1,0 +1,15 @@
+View: Virtual table
+1. 透视数据，避免每次执行多余的操作
+2. 原始table中的数据变化会自动体现在view视图上
+3. Sqlite不可修改Views中的数据, 可以如table一样进行查询
+4. 在创建View时，对于重合的名称，会默认添加区别 !! 需要自定义设置 AS
+
+>  CREATE VIEW artist_list AS
+>  SELECT artist.name AS artist, albums.name AS album, songs.track, songs.title
+>  FROM songs INNER JOIN albums ON songs.album = albums._id
+>             INNER JOIN artists ON albums.artist = artists._id
+>  ORDER BY artist.name, albums.name, songs.track;
+.
+>  SELECT * FROM artist_list; 像table一样使用view视图
+>  SELECT * FROM artist_list WHERE name like "test%";
+>  DROP VIEW artist_list; 删除VIEW视图, 不会对DB中的table数据造成影响 !!
