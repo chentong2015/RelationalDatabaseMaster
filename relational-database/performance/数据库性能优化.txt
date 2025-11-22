@@ -1,8 +1,8 @@
 TODO. Database Performance Optimization 数据库优化策略
 1. 创建Connection Pool: 连接池高效管理DB的连接资源
-2. 执行Batch Query: 降低发送到DB的请求，"DB交互次数"比"将数据插入表"具有更大性能影响
+2. 执行Batch Query: "DB交互请求次数"比"将数据插入表"具有更大性能影响
 3. 执行Concurrent Query: 将相互独立的操作并发执行
-4. 优化Slow Query: 优化慢SQL的执行逻辑，优化查询或更新逻辑
+4. 优化Sql Optimization: 优化慢SQL的执行逻辑
 5. 添加Cache Layer: 使用缓存降低DB的请求负载
 6. 扩展DB Partition: 将数据分片存储，或使用分布式数据库
 
