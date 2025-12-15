@@ -1,4 +1,5 @@
 -- TODO 1. 查询特定用户所执行的语句(SQL ID + SQL Text)
+-- v$sql表需要权限才能查询
 SELECT s.sid, s.serial#, s.username, s.status, s.sql_id, q.sql_text
 FROM v$session s
 JOIN v$sql q ON s.sql_id = q.sql_id
