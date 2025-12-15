@@ -1,5 +1,3 @@
-
-
 -- TODO 1. 查询特定用户所执行的语句(SQL ID + SQL Text)
 SELECT s.sid, s.serial#, s.username, s.status, s.sql_id, q.sql_text
 FROM v$session s
