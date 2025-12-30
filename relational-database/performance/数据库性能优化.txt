@@ -1,3 +1,7 @@
+TODO. 解决DB交互耗时造成UI阻塞的问题?
+执行异步操作，提交请求后立即返回，不造成UI的阻塞
+查询执行完成后，再向前端推送数据，发送数据
+
 TODO. Database Performance Optimization 数据库优化策略
 1. 创建Connection Pool: 连接池高效管理DB的连接资源
 2. 执行Batch Query: "DB交互请求次数"比"将数据插入表"具有更大性能影响
@@ -6,6 +10,10 @@ TODO. Database Performance Optimization 数据库优化策略
 5. 添加Cache Layer: 使用缓存降低DB的请求负载
 6. 扩展DB Partition: 将数据分片存储，或使用分布式数据库
 
-TODO. 解决DB交互耗时造成UI阻塞的问题?
-执行异步操作，提交请求后立即返回，不造成UI的阻塞
-查询执行完成后，再向前端推送数据，发送数据
+Optimization Strategies
+1.	Partitioning: Consider partitioning the large tables by date ranges if applicable
+2.	Materialized Views: Create pre-aggregated views for common query patterns
+3.	Query Hints: Add query hints to force optimal join orders
+4.	Pagination: Implement pagination to reduce result set size
+5.	Denormalization: Consider denormalizing some data to reduce joins
+6.	Database Tuning: Adjust memory allocation and parallel query settings
