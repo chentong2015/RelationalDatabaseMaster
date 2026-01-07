@@ -7,9 +7,9 @@ MethodA(带事务)
 1. 支持MethodA中的事务
 2. 不支持MethodA中的事务
 
-TODO. 事务传播配置的具体实现
-Springframework Transaction实现
+TODO. 事务传播配置实现(7种类型)
+Spring Data JPA Transactional注解配置
 @Transactional(propagation = Propagation.SUPPORTS, readOnly = true)
 
-Spring Batch 事务配置
+Spring Batch TransactionDefinition接口定义
 transactionTemplate.setPropagationBehavior(TransactionDefinition.PROPAGATION_REQUIRED);
