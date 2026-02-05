@@ -1,0 +1,22 @@
+Transaction：A sequence of SQL statement that are treated as a single logical unit
+当需要执行一系列操作时，应将所有操作作为一个unit执行单元，要么全部执行成功，要么都不完成
+当执行序列中有任何一个statement失败，则回滚之前的执行结果，不做保存
+只有当需要改变DB数据时才有必要使用transaction事务
+
+TODO. ACID 事务的四个核心特征
+1. Atomicity  原子性: 事务是一个原子执行单元，全部执行或者不执行
+2. Consistent 一致性: 所有相关的数据都应用于事务的修改，确保数据库在成功提交事务后正确更改状态
+3. Isolation  隔离性: 并发执行的事务彼此无法看到彼此的中间状态
+4. Durable    持久性: 数据修改是永久性的
+
+TODO. JDBC Transaction执行操作
+1. Turn off auto-commit: 默认是自动提交
+   connection.setAutoCommit(false); Select查询同样需要注意事务
+2. Perform the SQL Operations
+3. If OK, Connection.commit();
+4. If Not, Connection.rollback(); 回滚变更以及释放当前连接所拥有的锁 !!
+   - Undoes all changes made in the current transaction.
+   - Releases any database locks currently held by this Connection object.
+   - This method should be used only when auto-commit mode has been disabled.
+4. Turn on the auto-commit:
+   Connection.setAutoCommit(true);

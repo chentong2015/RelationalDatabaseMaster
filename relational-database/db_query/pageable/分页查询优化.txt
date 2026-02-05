@@ -1,6 +1,6 @@
--- TODO. 分页查询优化:
--- 偏移量很大会导致查询性能下降: 避免使用偏移，记录上次查询的最大ID
-where id > ? order by id fetch first ? rows only
+偏移量很大会导致查询性能下降: 记录上次查询结果最大ID替代Offset偏移
+where id > lastMaxID
+order by id fetch first ? rows only
 
--- 对于需要获取查询总数的请求: 将查询统计并发执行
+对于需要获取查询总数的请求: 将查询统计并发执行
 select count(id) from large_table

@@ -5,11 +5,12 @@ import java.sql.Connection;
 import java.sql.SQLException;
 import java.sql.Types;
 
+// TODO. Procedure Function 方法的调用
+// 通过connection.prepareCall()调用DB中预先定义好的Procedure Function
+// 1. 定义传递的参数
+// 2. 定义返回值的类型
 public class JdbcCallableStatement {
 
-    // 通过connection.prepareCall()调用DB中预先定义好的Procedure Function
-    // 1. 定义传递的参数
-    // 2. 定义返回值的类型
     // Creates a CallableStatement object for calling database stored procedures.
     // The CallableStatement object provides methods for setting up its IN and OUT parameters,
     // and methods for executing the call to a stored procedure.

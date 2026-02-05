@@ -22,9 +22,10 @@ public class JdbcDriverConnection {
         Driver driver = (Driver) Class.forName(driverName).getDeclaredConstructor().newInstance();
         Connection connection = driver.connect(url, properties);
         connection.setAutoCommit(true);
+
+        // JDBC Connection默认在SQL Statement结束瞬间会立即更新数据库
         // 默认或者设置成自动提交的情况下，无需再显式地提交
         // connection.commit();
-        System.out.println("done");
         connection.close();
     }
 

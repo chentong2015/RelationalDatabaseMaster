@@ -1,0 +1,16 @@
+保持字段明确
+保持数据库统计信息最新
+移除不必要的子查询包装
+
+NOT IN	-> 改为 NOT EXISTS
+子查询	-> 尽可能 JOIN 替代
+OR条件	-> 拆为 UNION ALL
+分页	    -> 使用基于主键的游标分页
+索引   	-> 增加复合索引
+执行计划	-> 使用 EXPLAIN 或 ANALYZE
+
+count(field)替代count(*)提高统计速度，避免使用*查询
+where+join 先对表筛选后再联合查询，小表驱动(JOIN)大表
+where 条件单表查，锁定最小返回记录表
+distinct 不能作用到BLOB字段，无法针对二进制大数据进行比对
+select distinct user2 from table 对于千万级数据表可能造成性能问题
