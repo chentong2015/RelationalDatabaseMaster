@@ -15,10 +15,5 @@ select id from tableA where id > 100;
 select DISTINCT id from tableA where status = 'updated';
 select count(DISTINCT id) from tableA where status = 'updated';
 
--- SQL Server 离散查询:
--- select distinct必须添加order by排序, 且排序字段必须在select list列表中
--- [ORDER BY items must appear in the select list if SELECT DISTINCT is specified.]
-select distinct id from tableA order by id;
-
 -- select 0 空排序占位符: 等效于没有排序
 select distinct id from tableA order by (select 0);
