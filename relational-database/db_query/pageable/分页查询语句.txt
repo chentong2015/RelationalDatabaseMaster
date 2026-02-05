@@ -1,8 +1,0 @@
-TODO. 分页查询语句: 不同DB可能存在差异
-offset偏移量(Page整数倍) + Page Size查询行数
-
-1. 偏移量很大会导致查询性能下降: 避免使用偏移，记录上次查询的最大ID
-   where id > ? order by id fetch first ? rows only
-
-2. 对于需要获取查询总数的请求: 将纯统计的请求分离，并发执行
-   select count(id) from large_table
