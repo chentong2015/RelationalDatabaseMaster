@@ -1,4 +1,4 @@
-Scenario 实战场景如下:
+Scenario 实战场景:
 User A selects a Student object to edit it.
 User B selects the same student to edit it.
 User A presses the save button, then user B presses the save button.
