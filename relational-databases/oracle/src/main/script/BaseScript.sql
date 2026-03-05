@@ -1,8 +1,11 @@
--- TODO. 表名和字段名全部大写
+-- 设置允许脚本时的参数
+DEFINE TS_DATA = &1;
+
+-- 表名和字段名全部大写
 CREATE TABLE T_BATCHING_COMMENT (
    ID NUMBER PRIMARY KEY,
    REVIEW VARCHAR2(30) -- 字符串为VARCHAR2
-) tablespace TS_DATA; -- 将表存储到特定表空间(Tablespace)管理
+) tablespace &TS_DATA; -- 存储到特定表空间管理
 
 -- 调用定义的含参数的Procedure
 -- call procedure_name ('', '') into ..

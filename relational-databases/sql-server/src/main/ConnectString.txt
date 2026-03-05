@@ -9,6 +9,7 @@ TODO. 特殊的连接参数: 注意字符串和boolean区别
 encrypt=false;
 Trusted_Connection=true;  版本11.2之后必须设置trust连接参数
 trustServerCertificate=true;
-sendStringParametersAsUnicode=false; 字符串参数在通过PreparedStatement发送时的数据类型
+sendStringParametersAsUnicode=false;
+  字符串参数在通过PreparedStatement发送时的数据类型
   默认true: String参数发送为NVARCHAR/NCHAR, 可能存在隐式转换, 影响性能
   设置false: String参数发送为VARCHAR/CHAR, 可能存在字符集乱码, 性能更好
