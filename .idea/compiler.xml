@@ -39,6 +39,7 @@
       <module name="javax-persistence-api" target="17" />
       <module name="jdbc-database" target="1.8" />
       <module name="jdbc-driver" target="17" />
+      <module name="jdbc-driver-connection" target="17" />
       <module name="jpa-design" target="17" />
       <module name="liquibase-core-4-18" target="17" />
       <module name="liquibase-core-4-18-sub" target="15" />
