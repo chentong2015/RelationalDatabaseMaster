@@ -17,6 +17,6 @@
     <modules>
         <module>jdbc-connection-driver</module>
         <module>jdbc-connection-pool</module>
-        <module>relational-databases</module>
+        <module>relational-database</module>
     </modules>
 </project>

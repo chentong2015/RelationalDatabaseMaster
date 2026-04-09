@@ -1,5 +1,5 @@
 TODO: Schema Design
-- Catalog(Oracle, DB2 and MySQL)和Schema(PostgresSQL)是相同概念
+- Catalog(Oracle, DB2, MySQL)和Schema(PostgresSQL)是相同概念
 - 软件底层DB设计属于具体细节，任何变动都可能带来巨大的影响
 - 多个软件共享DB时存在版本兼容性问题，相同DB不一定支持多版本
 - 数据表Version版本之间存在兼容性，升级单个版本可能影响兼容Matrix
