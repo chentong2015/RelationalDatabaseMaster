@@ -16,7 +16,6 @@ $$ LANGUAGE plpgsql;
 create or replace trigger listenPersonInsertion after insert on t_person
 execute function handlePersonInsertion();
 
-
 TODO. Trigger对于数据大量删除的影响
 当数据库在有约束的情况下，无论进行删除或者更新操作，都会对相关表进行一个校验
 判断相关表的相关记录是否被删除或者更新，这个检查的过程会非常慢
