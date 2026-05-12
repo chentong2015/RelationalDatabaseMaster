@@ -8,17 +8,13 @@ TODO. 如何快速删除DB中千万行以上的数据 ?
 - 大数据导致提交和回滚困难
 - 表直接的外键关联会导致连带删除: 删除record标识删除所有外键指向它的数据
 
-设计思路:
-1. 分析表结构和表关联，确定删除条件和Index索引等信息
-2. 分析DELETE语句执行计划，选择最高效的SQL
-3. 执行并行 + 分批DELETE + COMMIT模式删除
-
-具体实现:
-- 直接在原表删除，避免大表JOIN
-- 表中大字段(content)索引是性能杀手(删除每行=更新Index树)
-- 根据ID切片数据 MOD(ID, :parallelCount) = :parallelIndex
-- 每个线程自循环 + 自动结束
-  while (true) {
+设计实现:
+1. 分析表结构和Index索引等信息，分析DELETE语句执行计划
+2. 直接在原表删除，避免大表JOIN
+3. 表中大字段(content)索引是性能杀手(删除每行=更新Index树)
+4. 根据ID切片数据 MOD(ID, :parallelCount) = :parallelIndex
+5. 循环模式: 并行删除+分批提交，限制每批事务大小
+   while (true) {
      int deleted = deleteBatch();
      if (deleted == 0) break;
-  }
+   }
