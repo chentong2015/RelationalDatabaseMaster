@@ -1,21 +1,24 @@
 TODO. 如何快速删除DB中千万行以上的数据 ?
 约束条件:
-- Table表必须保证可用性, 删除期间必须支持Insert
-- Table表结构不能修改, 无法创建临时表或Partition分区表
-- 数据必须根据条件删除, 无法直接Truncate整个表
+- Table表必须保证可用性，删除期间必须支持数据插入
+- 表结构不能修改，不能创建临时表，无法CTAS重建表，不能PARTITION分区表
+- 必须根据条件删除数据，无法直接Truncate整个表
 
-实现思路:
+核心难点:
+- 大数据导致提交和回滚困难
+- 表直接的外键关联会导致连带删除: 删除record标识删除所有外键指向它的数据
+
+设计思路:
 1. 分析表结构和表关联，确定删除条件和Index索引等信息
-2. 分析DELETE语句的执行计划
-3. 确定最高效的SQL，避免大表JOIN
-4，执行并行 + 分批DELETE + COMMIT模式删除
+2. 分析DELETE语句执行计划，选择最高效的SQL
+3. 执行并行 + 分批DELETE + COMMIT模式删除
 
-实现细节:
+具体实现:
+- 直接在原表删除，避免大表JOIN
+- 表中大字段(content)索引是性能杀手(删除每行=更新Index树)
 - 根据ID切片数据 MOD(ID, :parallelCount) = :parallelIndex
 - 每个线程自循环 + 自动结束
   while (true) {
      int deleted = deleteBatch();
-     if (deleted == 0) {
-        break;
-     }
+     if (deleted == 0) break;
   }

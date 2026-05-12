@@ -1,0 +1,20 @@
+-- 将表的指定列设置成索引, 并显示表上的索引
+CREATE INDEX index_name ON table_name (col1);
+SHOW index from table_name;
+
+Create unique index index_name on table_name(column_name ASC/DESC);
+
+CREATE CLUSTERED index index_name on table_name(column_name ASC/DESC);
+(physically sorted in a database table)
+
+CREATE NONCLUSTERED INDEX index_name ON table_name(column_name ASC/DESC);
+
+CREATE NONCLUSTERED INDEX [index_page_table] ON [dbo].[t_page_index]([code] ASC)
+WITH (PAD_INDEX = OFF,
+  STATISTICS_NORECOMPUTE = OFF,
+  SORT_IN_TEMPDB = OFF,
+  DROP_EXISTING = OFF,
+  ONLINE = OFF,
+  ALLOW_ROW_LOCKS = ON,
+  ALLOW_PAGE_LOCKS = OFF,
+  OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
