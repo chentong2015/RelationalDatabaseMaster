@@ -10,7 +10,7 @@ Basically, we have some options:
    But B did not know that A was already editing and the changes of A might be more important.
 3. Should the changes of A – the first one to press save – be successful
    and B gets an error message and needs to restart editing?
-4. Should A be successful while B is being informed about the changes
+4. Should A be successful while B is being informed about the changes,
    and he can decide if we want to overwrite, merge or cancel his changes ?
 
 执行逻辑1: 需要悲观锁，需要更新数据是添加写锁
