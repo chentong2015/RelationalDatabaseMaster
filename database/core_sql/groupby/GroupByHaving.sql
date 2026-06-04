@@ -10,7 +10,7 @@ limit 100;
 -- 查找所有分数都大于等于80的学生ID
 select student_id from t_students
 group by student_id
-having min(score) >= 80; -- 对分组后的数据进行筛选判断
+having min(score) >= 80;
 
 -- 选择重复信息的列
 select name, email count(*) as nums from users
