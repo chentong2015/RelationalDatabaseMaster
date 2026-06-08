@@ -1,4 +1,4 @@
-package driver_manager.impl;
+package driver_manager;
 
 import java.sql.*;
 import java.util.Properties;

@@ -2,4 +2,4 @@
 # com.microsoft.sqlserver.jdbc.SQLServerDriver
 
 # 实现类型的全路径，随着项目的变化而动态变化
-driver_manager.impl.MyDBServerDriver
+driver_manager.MyDBServerDriver

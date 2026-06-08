@@ -1,12 +1,13 @@
+TODO. Statement执行完Batch之后，将会返回一个受影响行数的数组统计
 Sybase: executeBatch() will always return 1
+
 Oracle: executeBatch() will always return 1
    批量插入不会合并command, 导致返回的受影响数目使用为1
+
 Postgresql: executeBatch() will return the value -2 or 1
-   Postgresql批量插入的执行策略:
    根据执行的数量动态划分command, 合并后的command成功执行后将会返回SUCCESS_NO_INFO的状态
    最后一个执行的statement可能为single update;直接返回正确的影响行数
 
-TODO. Statement执行完Batch之后，将会返回一个受影响行数的数组统计
 int[] executeBatch() throws SQLException;
   Submits a batch of commands to the database for execution and if all commands execute successfully,
   returns an array of update counts. The int elements of the array that is returned are ordered to
