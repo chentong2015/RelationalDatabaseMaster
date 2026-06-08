@@ -13,10 +13,10 @@
     <packaging>pom</packaging>
 
     <modules>
-        <module>custom-datasource</module>
-        <module>commons-dbcp2</module>
+        <module>datasource</module>
+        <module>datasource-dbcp2</module>
         <module>hikaricp</module>
-        <module>hikaricp-monitoring</module>
+        <module>hikaricp-monitor</module>
     </modules>
 
     <properties>

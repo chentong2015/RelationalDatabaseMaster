@@ -3,7 +3,7 @@ import org.apache.commons.dbcp2.BasicDataSource;
 import javax.sql.DataSource;
 import java.time.Duration;
 
-public class CommonsDbcp2Handler {
+public class CommonsDbcp2Holder {
 
     // 如果使用BasicManagedDataSource，则必须配置TransactionManager
     public static DataSource getDatasource(int threads) {
@@ -26,7 +26,6 @@ public class CommonsDbcp2Handler {
         // for a connection to be returned before throwing an exception,
         // or <= 0 to wait indefinitely.
         dataSource.setMaxWait(Duration.ofSeconds(30));
-
        return dataSource;
     }
 }

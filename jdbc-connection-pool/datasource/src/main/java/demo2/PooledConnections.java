@@ -175,6 +175,7 @@ public class PooledConnections {
 
     // 使用builder模式来配置连接池的参数
     public static class Builder {
+
         private final ConnectionCreator connectionCreator;
         private ConnectionValidator connectionValidator;
         private final boolean autoCommit;

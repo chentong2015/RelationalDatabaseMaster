@@ -7,30 +7,30 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="hikaricp-monitoring" />
         <module name="jdbc-connection-driver" />
         <module name="oracle" />
         <module name="sybase" />
-        <module name="custom-datasource" />
         <module name="relational-database-test" />
-        <module name="commons-dbcp2" />
         <module name="sql-server" />
         <module name="hikaricp" />
-        <module name="h2-db" />
-        <module name="sql-lite" />
         <module name="postgresql" />
+        <module name="datasource" />
+        <module name="hikaricp-monitor" />
         <module name="orm-design-core" />
         <module name="entity-class-parser" />
+        <module name="datasource-dbcp2" />
         <module name="mysql" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="connection-pool-design" target="17" />
       <module name="core-annotation-validation" target="17" />
+      <module name="datasource-proxy" target="17" />
       <module name="design-jdbc-driver" target="17" />
       <module name="distributed-database" target="15" />
       <module name="distributed-db" target="15" />
       <module name="document-db-mongodb" target="11" />
+      <module name="h2-db" target="11" />
       <module name="hyper-sql" target="15" />
       <module name="jakarta-persistence-api" target="17" />
       <module name="java-persistence-api" target="17" />
@@ -66,6 +66,7 @@
       <module name="relational-non-database" target="15" />
       <module name="sample-mapping-annotation" target="15" />
       <module name="sample-mapping-xml" target="15" />
+      <module name="sql-lite" target="15" />
       <module name="test" target="15" />
       <module name="test-hibernate" target="15" />
       <module name="test-hibernate-db" target="17" />

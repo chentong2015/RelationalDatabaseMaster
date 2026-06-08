@@ -3,11 +3,11 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
-public class CommonsDbcp2ProjectDemo {
+public class CommonsDbcp2Test {
 
     public static void main(String[] args) throws InterruptedException {
         String query = "insert into test (id, value) values (20, 'test')";
-        DataSource dataSource = CommonsDbcp2Handler.getDatasource(2);
+        DataSource dataSource = CommonsDbcp2Holder.getDatasource(2);
 
         try(Connection connection = dataSource.getConnection();
             PreparedStatement statement = connection.prepareStatement(query)) {

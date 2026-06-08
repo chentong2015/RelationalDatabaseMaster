@@ -12,12 +12,14 @@
     <file url="file://$PROJECT_DIR$/../JpaOrmMiddlewaresProject/orm-mybatis/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/jdbc-connection-driver/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/jdbc-connection-driver/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/jdbc-connection-pool/commons-dbcp2/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/jdbc-connection-pool/commons-dbcp2/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/jdbc-connection-pool/custom-datasource/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/jdbc-connection-pool/custom-datasource/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/jdbc-connection-pool/hikaricp-monitoring/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/jdbc-connection-pool/hikaricp-monitoring/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/jdbc-connection-pool/datasource-dbcp2/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/jdbc-connection-pool/datasource-dbcp2/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/jdbc-connection-pool/datasource-proxy/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/jdbc-connection-pool/datasource-proxy/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/jdbc-connection-pool/datasource/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/jdbc-connection-pool/datasource/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/jdbc-connection-pool/hikaricp-monitor/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/jdbc-connection-pool/hikaricp-monitor/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/jdbc-connection-pool/hikaricp/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/jdbc-connection-pool/hikaricp/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/jdbc-connection-pool/orm-design-core/src/main/java" charset="UTF-8" />

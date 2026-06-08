@@ -18,6 +18,7 @@
     </option>
     <option name="ignoredFiles">
       <set>
+        <option value="$PROJECT_DIR$/jdbc-connection-pool/datasource-proxy/pom.xml" />
         <option value="$PROJECT_DIR$/orm-jpa-hibernate-example/test/pom.xml" />
         <option value="$PROJECT_DIR$/orm-jpa-hibernate/native-hibernate5-upgrade/pom.xml" />
         <option value="$PROJECT_DIR$/orm-jpa-hibernate/orm-jpa-hibernate-example/pom.xml" />
