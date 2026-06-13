@@ -23,14 +23,17 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="commons-dbcp2" target="17" />
       <module name="connection-pool-design" target="17" />
       <module name="core-annotation-validation" target="17" />
+      <module name="custom-datasource" target="17" />
       <module name="datasource-proxy" target="17" />
       <module name="design-jdbc-driver" target="17" />
       <module name="distributed-database" target="15" />
       <module name="distributed-db" target="15" />
       <module name="document-db-mongodb" target="11" />
       <module name="h2-db" target="11" />
+      <module name="hikaricp-monitoring" target="17" />
       <module name="hyper-sql" target="15" />
       <module name="jakarta-persistence-api" target="17" />
       <module name="java-persistence-api" target="17" />
@@ -63,6 +66,7 @@
       <module name="orm-mybatis" target="15" />
       <module name="orm-spring-jdbc" target="15" />
       <module name="postgre-sql" target="15" />
+      <module name="relational-databases" target="15" />
       <module name="relational-non-database" target="15" />
       <module name="sample-mapping-annotation" target="15" />
       <module name="sample-mapping-xml" target="15" />
