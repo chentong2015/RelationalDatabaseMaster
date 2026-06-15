@@ -2,11 +2,11 @@ TODO. Why Data Partitioning ?
 由于DB Server的长期使用导致数据量增加，造成存储压力
 数据的查询(即使使用Index索引)和更大性能降低，服务性能下降
 
-TODO. Data Partitioning 设计条件
-1. 根据数据不同特征划分：数据的ID，数据的Hash存储，数据的生成时间
-2. 根据不同维度划分：服务器的负载，业务逻辑层面
+TODO. Data Partitioning 划分条件
+1. 根据数据特征：数据的ID，数据的Hash存储，数据的生成时间
+2. 根据不同维度：服务器负载(优先量小的DB)，业务逻辑(划分每次导入/批次数据)
 
-TODO. Data Partitioning 设计本质
+TODO. Data Partitioning 设
 - 数据被均匀的存储到不同Server
   - 尽量保证随机性，避免部分Servers达到存储极限
 - 数据被分片存储后能够降低Server的负载压力
