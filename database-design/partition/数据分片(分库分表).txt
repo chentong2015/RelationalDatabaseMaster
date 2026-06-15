@@ -6,7 +6,7 @@ TODO. Data Partitioning 划分条件
 1. 根据数据特征：数据的ID，数据的Hash存储，数据的生成时间
 2. 根据不同维度：服务器负载(优先量小的DB)，业务逻辑(划分每次导入/批次数据)
 
-TODO. Data Partitioning 设
+TODO. Data Partitioning 设计局限
 - 数据被均匀的存储到不同Server
   - 尽量保证随机性，避免部分Servers达到存储极限
 - 数据被分片存储后能够降低Server的负载压力
