@@ -1,0 +1,15 @@
+TODO. JDBC Transaction 自定义事务执行
+1. Turn off auto-commit: 默认是自动提交
+   connection.setAutoCommit(false);
+
+2. Perform the SQL Operations
+
+3. If OK, Connection.commit();
+
+4. If Not, Connection.rollback();
+  - Undoes all changes made in the current transaction.
+  - Releases any database locks currently held by this Connection object.
+  - This method should be used only when auto-commit mode has been disabled.
+
+4. Turn on the auto-commit:
+   Connection.setAutoCommit(true);
