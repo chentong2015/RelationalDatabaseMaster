@@ -15,5 +15,5 @@ Optimization Strategies
 2.	Materialized Views: Create pre-aggregated views for common query patterns
 3.	Query Hints: Add query hints to force optimal join orders
 4.	Pagination: Implement pagination to reduce result set size
-5.	Denormalization: Consider denormalizing some data to reduce joins
+5.	Denormalization: Consider de-normalizing some data to reduce joins
 6.	Database Tuning: Adjust memory allocation and parallel query settings
